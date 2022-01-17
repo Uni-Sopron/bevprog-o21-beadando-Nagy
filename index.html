@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <script>
+      window.alert("Üdvözölöm Nagy Cintia weblapján!"); 
+    </script>
+    <h2>Nagy Cintia weblapja</h2>
+
+    <script>                                                            
+      function validateForm() {
+      let x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+        alert("Ki kell tölteni!");
+      return false;
+	  }
+	    else {   
+         alert("Köszönjük válaszát!");
+    }
+}
+    </script>
+
+  </head>
+  <body>                                        
+    <form name="myForm" action="valasz.html" onsubmit="return validateForm()" method="post">
+    Adja meg a nevét: <input type="text" name="fname">
+    <input type="submit" value="Elfogad">
+    </form>
+
+  <p>Ha kíváncsi a mai időjárásra, kattintson a hivatkozásra!</p>     
+  <p><a id="idoj" target="_blank" href="https://www.idokep.hu">Időjárás</a></p>   
+
+  <p>Tetszett a program?</p>        
+    <button onclick="document.getElementById('myImage').src='smile.png'">Igen</button>    
+    <img id="myImage" src="kerdo.png" style="width:100px">
+    <button onclick="document.getElementById('myImage').src='negative.png'">Nem</button>  
+    <button onclick="document.getElementById('myImage').src='kerdo.png'">Válasz törlése</button>   
+  </body>
+</html>
